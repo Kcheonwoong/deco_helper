@@ -20,13 +20,20 @@ def set_metadata():
     return meta
 
 
-metadata = set_metadata()
+def long_description():
+    with open("README.rst", "r") as fh:
+        desc = fh.read()
 
+    return desc
+
+
+metadata = set_metadata()
 setuptools.setup(name=NAME,
                  version=metadata['version'],
                  author=metadata['author'],
                  author_email=metadata['contact'],
                  url=metadata['url'],
+                 long_description=long_description(),
                  packages=setuptools.find_packages(exclude=['test*']),
                  # package_dir={'': 'package_dir'},
                  py_modules=['helpers'],
@@ -36,3 +43,6 @@ setuptools.setup(name=NAME,
                  description='Decorator Helper',
                  license='MIT'
                  )
+
+# python setup.py bdist_wheel
+# python -m twine upload ./...
