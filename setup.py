@@ -45,4 +45,4 @@ setuptools.setup(name=NAME,
                  )
 
 # python setup.py bdist_wheel
-# python -m twine upload ./...
+# python -m twine upload ./dist/deco_helper-x.x.x....whl

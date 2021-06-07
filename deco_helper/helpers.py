@@ -26,7 +26,7 @@ def helper(user_deco=None):
         return helper
 
     if not callable(user_deco):
-        raise TypeError('Delper.deco accept only 1 argument that is callable')
+        raise TypeError('helper accept only 1 argument that is callable')
 
     @wraps(user_deco)
     def __user_deco(*d_args, **d_kwargs):
