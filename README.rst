@@ -1,7 +1,7 @@
 Decorator Helper
 ================
 
-:Version: 0.0.2
+:Version: 0.1.0
 :Download: https://pypi.org/project/deco-helper/
 :Source: https://github.com/Kcheonwoong/deco_helper
 :Keywords: decorator
